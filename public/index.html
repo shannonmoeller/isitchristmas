@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width" />
+<meta charset="utf-8" />
+
+<title>Is it Christmas?</title>
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    display: grid;
+    place-content: center;
+    font: lighter clamp(16px, 20vmin, 128px) / 1 sans-serif;
+    text-align: center;
+  }
+</style>
+
+<script type="module">
+  let today = new Date();
+  let isDecember = today.getMonth() === 11;
+  let isTwentyFifth = today.getDate() === 25;
+  let isChristmas = isDecember && isTwentyFifth;
+
+  document.body.innerHTML = isChristmas ? "yes" : "no";
+</script>
+
+<noscript>probably not</noscript>
